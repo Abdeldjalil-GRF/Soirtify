@@ -9,29 +9,34 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white" id="Navbar">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" id="Navbar">
+    <div class="container-fluid">
+       
+        <a class="navbar-brand" href="/pages/home.php">
+            <img src="/assets/images/Navbar/sporty_logo_icon.png" alt="Logo" class="logo">
+        </a>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-            <a class="nav-item nav-link me-3" href="#">
-                <img src="/assets/images/Navbar/home_icon.png" alt="Home Icon">
-                <span class="sr-only">(current)</span>
-            </a>
-            <a class="nav-item nav-link me-3" href="#">
-                <img src="/assets/images/Navbar/about_us_icon.png" alt="About Us">
-            </a>
-            <a class="nav-item nav-link me-3" href="#">
-                <img src="/assets/images/Navbar/feedback_icon.png" alt="FeedBacks">
-            </a>
-            <a class="nav-item nav-link disabled me-3" href="#">
-                <img src="/assets/images/Navbar/connexion_icon.png">
-            </a>
-            <button type="button" class="btn btn-danger custom-button me-3">connexion</button>
-            <button type="button" class="btn btn-danger custom-button">inscription</button>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link me-3" href="/pages/home.php">
+                    <img src="/assets/images/Navbar/home_icon.png" alt="Home Icon">
+                </a>
+                <a class="nav-item nav-link me-3" href="#">
+                    <img src="/assets/images/Navbar/about_us_icon.png" alt="About Us">
+                </a>
+                <a class="nav-item nav-link me-3" href="#">
+                    <img src="/assets/images/Navbar/feedback_icon.png" alt="Feedback">
+                </a>
+              
+                <a href="page_connexion.php"><button class="btn btn-danger custom-button me-3">Connexion</button></a>
+                <button type="button" class="btn btn-danger custom-button">Inscription</button>
+            </div>
         </div>
     </div>
 </nav>
