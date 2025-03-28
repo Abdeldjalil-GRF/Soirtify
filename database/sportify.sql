@@ -1,4 +1,6 @@
 
+
+ 
 -- Structure de la table `clients`
 --
 
