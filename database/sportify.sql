@@ -182,4 +182,4 @@ ALTER TABLE `cours`
 ALTER TABLE `cours_clients`
   ADD CONSTRAINT `fk_cours_clients_clients` FOREIGN KEY (`id_client`) REFERENCES `clients` (`Id_Client`),
   ADD CONSTRAINT `fk_cours_clients_cours` FOREIGN KEY (`id_cour`) REFERENCES `cours` (`id_cour`);
-COMMIT;
+
