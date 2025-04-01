@@ -1,16 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "root";  
-$password = "";     
+$host = "localhost";  
 $dbname = "sportify"; 
+$username = "root";   
+$password = "";       
 
 try {
-    $conn = new PDO("mysql:host=$servername", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    echo "Connexion successful ";
-} catch(PDOException $e) {
-    die("Erreur : " . $e->getMessage());
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo json_encode(["status" => "error", "message" => "Connexion à la base de données échouée : " . $e->getMessage()]);
+    exit;
 }
-
 ?>
