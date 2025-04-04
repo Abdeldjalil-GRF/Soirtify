@@ -1,0 +1,139 @@
+body {
+    background-color: #FF5050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensure full height */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Center vertically */
+    gap : 10px;
+}
+
+.logo {
+    text-align: center; /* Centers content */
+    position: relative; /* Allows fine positioning */
+    left : -100px;
+}
+
+.logo img {
+    display: flexbox;
+    margin: 0 auto; /* Centers horizontally */
+    max-width: 50%; /* Keep the logo size fixed */
+    max-height: 50%; /* Keep the logo height fixed */
+}
+
+#sentences {
+    position: relative;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px; /* Increase font size of the sentence */
+    color: white;
+    margin: 0 auto;
+    width: 60%; /* Control the width for wrapping */
+    text-align: center; /* Centers the text */
+    line-height: 1.2; /* Adjust line spacing to allow more lines */
+    word-wrap: break-word; /* Ensure words break properly across lines */
+}
+
+
+.form_log_in {
+    background-color: white; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    max-width: 400px; /* Prevent stretching */
+    width: 100%; /* Ensures responsiveness */
+    margin: 0 auto;
+    text-align: center; /* Centers form content */
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column; /* Align elements in a column */
+    justify-content: space-between; /* Distribute space evenly */
+    margin-left : -70px;
+}
+
+.form_log_in img {
+    display: block;
+    margin: 0 ;
+    max-width: 100%; /* Adjust logo size */
+}
+
+
+.type  {
+    text-align: left; /* Align input fields and labels to the left */
+    margin-bottom: 15px; /* Spacing between input fields */
+}
+
+
+.type p {
+    margin-bottom: 5px; /* Space between label and input */
+    font-size: 25px;
+    font-weight: 400;
+    color: #000;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #000; /* Light border */
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+
+.btn.bkg {
+    width: 30%;
+    padding: 5px;
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    border: 2px solid #000; /* Black border */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn.bkg:hover {
+    background-color: white; /* White background on hover */
+    color: #000; /* Black text */
+}
+
+#message {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #ff0000; /* Red for error or success messages */
+    margin-top: 30px;
+    text-align: center;
+}
+
+a {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #385898; 
+    text-decoration: none; 
+}
+
+a:hover {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline; 
+    cursor: pointer;
+}
+
+#para{
+   
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+}
