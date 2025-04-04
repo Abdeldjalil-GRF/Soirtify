@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `prenom` varchar(50) NOT NULL,
   `mail` varchar(50) NOT NULL UNIQUE,
   `password` varchar(255) NOT NULL,
-  `date_Naissance` date NOT NULL,
+  `date_naissance` date NOT NULL,
   PRIMARY KEY (`id_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

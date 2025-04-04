@@ -19,14 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     // vérification si l'email existe déja 
-    $sql_email_verif = "Select * from clients where Mail = :email";
+    $sql_email_verif = "Select * from clients where mail = :email";
     $stmt2 = executeQuery($sql_email_verif,['email'=>$email]);
     $user_exist = $stmt2->fetch();
     if($user_exist ){
         echo "Adresse mail already exist";
         exit;
     }else{
-        $sql_to_execute = "INSERT INTO clients (`Nom`, `Prenom`, `Mail`, `Password`, `Date_Naissance`) 
+        $sql_to_execute = "INSERT INTO clients (`nom`, `prenom`, `mail`, `password`, `date_naissance`) 
                            VALUES (:lastname, :firstname, :email, :password_, :birthday)";
         $params = [
             'lastname' => $last_name,

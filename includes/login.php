@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = trim($_POST["password"]);
 
 
-    $sql_to_connect ="Select * from clients where Mail = :mail ";
+    $sql_to_connect ="Select * from clients where mail = :mail ";
     
     $stmt = executeQuery($sql_to_connect,['mail' => $email]);
 
@@ -17,8 +17,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     if($user){
-        if(password_verify($password,$user['Password'])){
-            $_SESSION['user_id'] = $user['Id_Client']; 
+        if(password_verify($password,$user['password'])){
+            $_SESSION['user_id'] = $user['Id_client']; 
             echo "success";
         }else{
             echo "Password Invalid";
