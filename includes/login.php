@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($user){
         if(password_verify($password,$user['password'])){
-            $_SESSION['user_id'] = $user['Id_client']; 
+            $_SESSION['user_id'] = $user['id_client']; 
             echo "success";
         }else{
             echo "Password Invalid";

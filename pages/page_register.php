@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="stylesheet" href="/SPORTIFY/assets/css/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
                     <form id="register_form" method="post">
                         <div class="card-top">
                             <p class="text">just few steps to become <strong>champion</strong></p>
-                            <img src="../assets/images/register/Logo_connexion_black.png" id="card-logo" alt="logo">
+                            <img src="/SPOrTIFY/assets/images/register/Logo_connexion_black.png" id="card-logo" alt="logo">
                         </div>
                         <div class="card-body">
                             <div class="type-container">
@@ -79,6 +79,6 @@
         </div>
     </div>
 
-    <script src="../assets/js/register.js"></script>
+    <script src="/SPORTIFY/assets/js/register.js"></script>
 </body>
 </html>

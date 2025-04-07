@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Vérifie que la connexion à la base de données est bien établie
-if (!isset($pdo)) {
+if (!isset($connexion)) {
     echo json_encode(["status" => "error", "message" => "Connexion à la base de données échouée."]);
     exit;
 }
@@ -24,29 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars(trim($_POST["email"] ?? ""));
     $message = htmlspecialchars(trim($_POST["message"] ?? ""));
 
-    // Vérifie que tous les champs sont remplis
-    if (empty($nom) || empty($prenom) || empty($num_tel) || empty($email) || empty($message)) {
-        echo json_encode(["status" => "error", "message" => "Tous les champs sont obligatoires."]);
-        exit;
-    }
-
-    // Vérifie que l'email est valide
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(["status" => "error", "message" => "Adresse email invalide."]);
-        exit;
-    }
 
     try {
         // Insère les données dans la base
-        $sql = "INSERT INTO commentaires (nom, prenom, num_tel, email, message) 
-                VALUES (:nom, :prenom, :num_tel, :email, :message)";
-        $stmt = $pdo->prepare($sql);
+        $sql = "INSERT INTO commentaires (nom, prenom, num_tel, mail, commentaire) 
+                VALUES (:nom, :prenom, :num_tel, :mail, :commentaire)";
+        $stmt = $connexion->prepare($sql);
         $stmt->execute([
             ":nom" => $nom,
             ":prenom" => $prenom,
             ":num_tel" => $num_tel,
-            ":email" => $email,
-            ":message" => $message
+            ":mail" => $email,
+            ":commentaire" => $message
         ]);
 
         // Envoi de l'email de récapitulatif à l'utilisateur avec PHPMailer

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/SPORTIFY/assets/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -12,14 +12,14 @@
 <body>
 <div class="container">
             <div class="logo">
-                <img id="logo_white" src="/assets/images/connexion/logo_connexion.png" alt="logo">
+                <img id="logo_white" src="/SPORTIFY/assets/images/connexion/logo_connexion.png" alt="logo">
                 <p id="sentences"> Log in, push your limits, and unleash your potential!</p>
             </div>
         
 
             <div class="form_log_in" >
-                <img id="black_logo" src="/assets/images/connexion/Logo_connexion_black.png" alt="logo black">
-                <form action="/includes/login.php" method="post" id="form_input">
+                <img id="black_logo" src="/SPORTIFY/assets/images/connexion/Logo_connexion_black.png" alt="logo black">
+                <form action="/SPORTIFY/includes/login.php" method="post" id="form_input">
                    
                     <div class="type">
                         <p>Email : *</p>
@@ -42,6 +42,6 @@
     </div>
     
 
-    <script src="/assets/js/login.js"></script>
+    <script src="/SPORTIFY/assets/js/login.js"></script>
 </body>
 </html>

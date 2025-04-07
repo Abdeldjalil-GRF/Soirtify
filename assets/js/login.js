@@ -19,14 +19,14 @@ document.getElementById("form_input").addEventListener("submit", async function 
     formData.append("password", password);
 
     try {
-        let response = await fetch("/includes/login.php", {
+        let response = await fetch("/SPORTIFY/includes/login.php", {
             method: "POST",
             body: formData,
         });
 
         let result = await response.text();
         messageContainer.textContent = result;
-
+        
         if (result.includes("success")) {
             window.location.href = "../pages/home.php"; 
         }

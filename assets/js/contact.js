@@ -43,6 +43,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         }
     })
     .catch(error => {
+        console.log(error);
         responseMessage.innerHTML = "Une erreur est survenue lors de l'envoi.";
         responseMessage.style.color = "red";
     })
