@@ -1,0 +1,75 @@
+/* Styles généraux */
+body {
+    background: linear-gradient(135deg, #ff7e7e, #ff3d3d);
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Nouvelle Navbar personnalisée */
+  .bg-white,
+  #Navbar {
+    background-color: white !important;
+  }
+  
+  /* Adaptation des couleurs pour navbar claire */
+  .navbar-light .navbar-brand,
+  .navbar-light .nav-link {
+    color: #000;
+  }
+  .navbar-light .nav-link:hover {
+    color: #ff3d3d;
+  }
+  
+  /* Exemple pour le logo dans la navbar */
+  .logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  
+  /* Boutons de la navbar (Connexion & Inscription) */
+  .custom-button {
+    background-color: #ff3d3d;
+    border-color: #ff3d3d;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 5px;
+  }
+  .custom-button:hover {
+    background-color: #ff7e7e;
+    border-color: #ff7e7e;
+  }
+  
+  /* Styles pour le pied de page */
+  footer {
+    margin-top: 3rem;
+  }
+  footer h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  footer .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+  }
+  footer .social-icons a:hover {
+    color: #ccc !important;
+  }
+
+
+  /* Default behavior: Show icons and hide text */
+.nav-text {
+    display: none; /* Hide span text by default */
+  }
+  .nav-icon {
+    display: inline-block; /* Show icons by default */
+  }
+  
+  /* When the navbar is expanded (via the toggler button), hide icons and show text */
+  #navbarNavAltMarkup.show .nav-icon {
+    display: none; /* Hide icons */
+  }
+  #navbarNavAltMarkup.show .nav-text {
+    display: inline-block; /* Show span text */
+  }

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="/SPORTIFY/assets/css/sports.css">
 </head>
 <body>
+  
   <!-- Nouvelle barre de navigation avec icônes et boutons -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white" id="Navbar">
     <div class="container-fluid">
