@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-10" id="card">
-                <div class="card custom-card">
+                <div class="card custom-card" id="global_card">
                     
                     
                     <form id="register_form" method="post">

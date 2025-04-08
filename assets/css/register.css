@@ -1,5 +1,5 @@
 body {
-    background-color: #FF5050 !important;
+    background-color: #000 !important;
     min-height: 100vh; 
     margin: 0;
 }
@@ -68,6 +68,11 @@ body {
     padding: 25px;
 }
 
+#global_card{
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 
+    0 0 40px rgba(255, 255, 255, 0.3), 
+    0 0 60px rgba(255, 255, 255, 0.2);
+}
 
 #card-logo{
     padding: 20px;

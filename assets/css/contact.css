@@ -1,5 +1,5 @@
 body {
-    background-color: #ff5050   ; 
+    background-color: #000   ; 
 }
 
 .container {
@@ -12,9 +12,7 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.1);
-      
-      
+    box-shadow: 0 0 20px rgba(255, 255, 255);
 }
 
 .logo    {
@@ -26,4 +24,13 @@ body {
 img {
     max-width: 100%; 
     height: auto; 
+}
+
+#btn_contact {
+    background-color: #000;
+    color: #fff;
+}
+
+#btn_contact:hover {
+    background-color: #333;
 }

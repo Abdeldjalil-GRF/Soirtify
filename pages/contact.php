@@ -49,7 +49,7 @@
                 <textarea class="form-control" id="message" name="message" rows="4" ></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+            <button type="submit" class="btn w-100" id="btn_contact">Envoyer</button>
         </form>
 
         <p id="response-message" class="mt-3 text-center"></p>
