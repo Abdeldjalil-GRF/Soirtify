@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     navbarToggler.addEventListener('click', function () {
       navbarCollapse.classList.toggle('show');
-    });
+    }); 
   });

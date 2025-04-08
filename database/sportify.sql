@@ -40,12 +40,13 @@ CREATE TABLE IF NOT EXISTS `type_cours` (
 
 CREATE TABLE IF NOT EXISTS `cours` (
   `id_cour` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `date_heure` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `prix` int(20) NOT NULL,
-  `categorie` enum('debutant','intermediaire','avance') NOT NULL,
-  `id_sport` int(10) UNSIGNED NOT NULL,
-  `id_coach` int(10) UNSIGNED NOT NULL,
-  `type` int(10) UNSIGNED NOT NULL,
+  `jour` ENUM('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche') NOT NULL,
+  `heure` TIME NOT NULL,
+  `prix` INT(20) NOT NULL,
+  `categorie` ENUM('debutant','intermediaire','avance') NOT NULL,
+  `id_sport` INT(10) UNSIGNED NOT NULL,
+  `id_coach` INT(10) UNSIGNED NOT NULL,
+  `type` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id_cour`),
   KEY `fk_cours_sport` (`id_sport`),
   KEY `fk_cours_coach` (`id_coach`),
@@ -54,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `cours` (
   CONSTRAINT `fk_cours_coach` FOREIGN KEY (`id_coach`) REFERENCES `coachs` (`id_coach`),
   CONSTRAINT `fk_cours_type` FOREIGN KEY (`type`) REFERENCES `type_cours` (`id_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 CREATE TABLE IF NOT EXISTS `cours_clients` (
   `id_cours_clients` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
