@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('#navbarNavAltMarkup');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
 
-    navbarToggler.addEventListener('click', function () {
-      navbarCollapse.classList.toggle('show');
-    }); 
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
   });
