@@ -80,7 +80,7 @@ li a:hover {
   font-weight: 800;
 }
 
-button {
+#btn_explore {
   width: 200px;
   padding: 15px;
   margin: 20px 5px;
@@ -93,10 +93,24 @@ button {
   font-weight: 600;
 }
 
-button:hover {
-  background: rgb(255,255,255);
+#btn_explore:hover {
+  background-color: grey;
   transition: 0.5s;
   color: white;
+}
+
+#btn_logout{
+  background: black;
+  color : white;
+  border: 0px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#btn_logout:hover {
+  background: rgb(255,255,255);
+  transition: 0.6s;
+  color: black;
 }
 
 .banner video {
@@ -180,6 +194,10 @@ button:hover {
 padding-bottom: 20px;
 }
 
+.about-section h1 {
+  text-decoration: underline;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
@@ -239,9 +257,12 @@ padding-bottom: 20px;
 }
 
 .row {
+  margin: 0;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: #000;
 }
 
 .column {
@@ -249,13 +270,19 @@ padding-bottom: 20px;
   max-width: 30%;
   box-sizing: border-box;
   margin: 8px;
+  background-color : black;
+  color: black;
 }
 
 #text-head {
-  margin: 10px auto;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding: 10px;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   font-size: 120px;
+  color: white;
+  background-color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -264,14 +291,69 @@ padding-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%; /* Stack columns on small screens */
-  }
+/*Feed back */ 
+#title-feedback{
+  text-decoration: underline;
+  color : white;
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+}
+#feedback{
+  margin-top: 2px;
+  background-color: #000;
+}
+.container-feedback {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card-feedback {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  max-width: 320px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-feedback:hover {
+  transform: translateY(-5px);
+}
+
+.feedback-text {
+  font-size: 1rem;
+  color: #343a40;
+}
+
+.feedback-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #212529;
+}
+
+/* Carte "ajouter un feedback" */
+.add-card-feedback {
+  border: 2px dashed #007bff;
+  background-color: #e9f3ff;
+  cursor: pointer;
+}
+
+.add-icon-feedback {
+  color: #007bff;
+}
+
+.add-text-feedback {
+  color: #007bff;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 
-Pied de carte */
+/*Pied de carte */
 .card-footer {
   background-color: #f8f9fa;
   border-top: 2px solid #dee2e6;
@@ -288,9 +370,14 @@ Pied de carte */
   width: 20px;
 }
 
-footer {
-  margin-top: 3rem;
+.row-footer{
+  margin: 0;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 footer h5 {
   font-weight: 600;
   margin-bottom: 1rem;
@@ -303,3 +390,13 @@ footer .social-icons a {
 footer .social-icons a:hover {
   color: #ccc !important;
 }
+
+#footer{
+  margin-top : 0px;
+}
+
+#lien{
+  color : white;
+}
+
+

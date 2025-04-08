@@ -38,7 +38,7 @@
                         <span id="message"></span>
                     </div>
                 </form>
-                <p id="para">No Account ! <a href="./page_register.php"> Sign in </a></p>
+                <p id="para">No Account ! <a href="./page_register.php"> Register </a></p>
             </div>       
   </div>
     

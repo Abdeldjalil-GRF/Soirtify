@@ -34,29 +34,38 @@
 
       <?php if (isset($_SESSION['user_id'])) : ?>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Travel</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a href="/Sportify/pages/home.php">Home</a></li>
+          <li><a href="/Sportify/pages/sports.php">Sports</a></li>
+          <li><a href="#">My Trainings</a></li>
+          <li><a onclick="confirmLogout(event)"><button  id="btn_logout">Logout</button></a></li>
         </ul>
       <?php else : ?>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#">Home</a></li>
+          <li><a href="/Sportify/pages/sports.php">Our Sports</a></li>
           <li><a href="#aboutus">About Us</a></li>
-          <li><a href="#">FeedBacks</a></li>
+          <li><a href="#feedback">FeedBacks</a></li>
           <li><a href="/SPORTIFY/pages/page_login.php">Connexion</a></li>
         </ul>
       <?php endif; ?>
     </div>
-
-    <div class="content">
+   
+  <?php if(!isset($_SESSION["user_id"])) : ?>
+  <div class="content">
       <h1>Be Champion</h1>
       <div>
-        <a href="/SPORTIFY/pages/contact.php"><button type="button">Explore</button></a>
+        <a href="/SPORTIFY/pages/contact.php"><button id="btn_explore" type="button">Explore</button></a>
       </div>
     </div>
   </div>
-
+   <?php else :  ?>
+   <div class="content">
+      <h1>Be Champion</h1>
+      <div>
+        <a href="/SPORTIFY/pages/home.php#aboutus"><button id="btn_explore" type="button">Know-More</button></a>
+      </div>
+    </div>
+  </div>
+  <?php endif ?>
   <!-- About us   -->
   <div class="about-section" id="aboutus">
     <h1>About Us</h1>
@@ -92,7 +101,7 @@
       <div class="card">
         <img src="/Sportify/assets/images/home/yacine.jpg" alt="Yacine Kharrouba">
         <div class="container">
-          <h2>Yacine Kharrouba 🇩🇿 </h2>
+          <h2>Yacine Kharrouba 🇩🇿</h2>
           <p class="title">BJJ World Champion</p>
           <p>World BJJ Champion 2023.</p>
           <p>yacine.kharrouba@sportify.fr</p>
@@ -112,8 +121,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Second Row (New Members with Karate, Muay Thai, and Musculation) -->
+  <!-- Second Row -->
   <div class="row">
     <div class="column">
       <div class="card">
@@ -151,28 +159,67 @@
       </div>
     </div>
   </div>
+
+  <!-- Section Feedbacks -->
+  
+  <section class="testimonials-section" id="feedback">
+      <h1 id="title-feedback">FeedBacks</h1>
+      <div class="container-feedback container">
+        <div class="row row-feedback text-center">
+          <div class="col-md-4 mb-4">
+            <div class="card-feedback p-4">
+              <div class="feedback-stars mb-2">⭐⭐⭐⭐⭐</div>
+              <p class="feedback-text">"Super expérience, je recommande vivement!"</p>
+              <h5 class="feedback-name mt-3">Lina Martin</h5>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card-feedback p-4">
+              <div class="feedback-stars mb-2">⭐⭐⭐⭐⭐</div>
+              <p class="feedback-text">"Très professionnel et à l’écoute."</p>
+              <h5 class="feedback-name mt-3">Yassine Belkacem</h5>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card-feedback p-4">
+              <div class="feedback-stars mb-2">⭐⭐⭐⭐</div>
+              <p class="feedback-text">"Une équipe au top, merci pour tout."</p>
+              <h5 class="feedback-name mt-3">Julie Robert</h5>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Carte + Ajouter un feedback  if i had time it's on discord  --> 
+      </div>
+    </section>
+
    
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4 mt-5">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/SPORTIFY/assets/js/home.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 " id="footer">
     <div class="container">
-      <div class="row">
+      <div class="row-footer">
         <div class="col-md-4">
           <h5><i class="fas fa-dumbbell me-2"></i>Sportify</h5>
-          <p>Plateforme de réservation d'activités sportives en ligne. Restez en forme où que vous soyez !</p>
+          <p>Online sports activity booking platform. Stay fit wherever you are. 💪🌍!</p>
         </div>
         <div class="col-md-4">
           <h5>Liens rapides</h5>
           <ul class="list-unstyled">
-            <li><a href="home.html" class="text-white">Accueil</a></li>
-            <li><a href="courses.html" class="text-white">Activités</a></li>
-            <li><a href="login.html" class="text-white">Connexion</a></li>
+            <li><a href="/Sportify/pages/home.php" class="text-white">Home</a></li>
+            <li><a href="/Sportify/pages/sports.php" class="text-white">Sports</a></li>
           </ul>
         </div>
         <div class="col-md-4">
           <h5>Contact</h5>
           <address>
-            <i class="fas fa-map-marker-alt me-2"></i>123 Rue du Sport<br>
-            75001 Paris, France<br>
+            <i class="fas fa-map-marker-alt me-2"></i><a href="/Sportify/pages/contact.php" id="lien">Contact form</a><br>
             <i class="fas fa-phone me-2"></i>+33 1 23 45 67 89<br>
             <i class="fas fa-envelope me-2"></i>contact@sportify.fr
           </address>
@@ -180,7 +227,7 @@
       </div>
       <hr>
       <div class="text-center">
-        <p>&copy; 2024 Sportify. Tous droits réservés.</p>
+        <p>&copy; 2025 Sportify. All rights are reserved</p>
         <div class="social-icons">
           <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
@@ -190,9 +237,5 @@
       </div>
     </div>
   </footer>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/SPORTIFY/assets/js/home.js"></script>
-</body>
 </html>
 
