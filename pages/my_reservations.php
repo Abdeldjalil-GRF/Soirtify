@@ -55,27 +55,28 @@ try {
 <body>
     <!-- Navbar original -->
     <div class="navbar">
-        <a href="/SPORTIFY/pages/home.php">
-            <img class="logo" src="/Sportify/assets/images/connexion/Logo_connexion_black.png">
-        </a>
+      <a href="/SPORTIFY/pages/home.php">
+        <img class="logo" src="/Sportify/assets/images/connexion/Logo_connexion_black.png">
+      </a>
 
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <!-- Menu toggle button for mobile -->
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
 
-        <?php if (isset($_SESSION['user_id'])) : ?>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Travel</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
-        <?php else : ?>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#">Feedbacks</a></li>
-                <li><a href="/SPORTIFY/pages/page_login.php">Login</a></li>
-            </ul>
-        <?php endif; ?>
+      <?php if (isset($_SESSION['user_id'])) : ?>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/Sportify/pages/home.php">Home</a></li>
+          <li><a href="/Sportify/pages/sports.php">Sports</a></li>
+          <li><a href="/Sportify/pages/my_reservations.php">My Trainings</a></li>
+          <li><a onclick="confirmLogout(event)"><button  id="btn_logout">Logout</button></a></li>
+        </ul>
+      <?php else : ?>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="/Sportify/pages/sports.php">Our Sports</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#feedback">FeedBacks</a></li>
+          <li><a href="/SPORTIFY/pages/page_login.php">Connexion</a></li>
+        </ul>
+      <?php endif; ?>
     </div>
 
     <main class="container my-5">

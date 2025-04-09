@@ -19,7 +19,7 @@
     font-weight: 400;
     font-style: normal;
   }
-  
+
   .navbar {
     width: 90%;
     padding: 30px;
@@ -63,6 +63,7 @@
   .navbar a:hover {
     color: black;
   }
+   
   
   @media (min-aspect-ratio: 16/9) {
     .banner video {
@@ -117,8 +118,6 @@
       display: block;
     }
   }
-  
-  
  
   
   /*Pied de carte*/
