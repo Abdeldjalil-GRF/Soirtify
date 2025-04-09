@@ -36,7 +36,7 @@
         <ul class="nav-links" id="nav-links">
           <li><a href="/Sportify/pages/home.php">Home</a></li>
           <li><a href="/Sportify/pages/sports.php">Sports</a></li>
-          <li><a href="#">My Trainings</a></li>
+          <li><a href="/Sportify/pages/my_reservations.php">My Trainings</a></li>
           <li><a onclick="confirmLogout(event)"><button  id="btn_logout">Logout</button></a></li>
         </ul>
       <?php else : ?>
@@ -53,7 +53,7 @@
   <div class="content">
       <h1>Be Champion</h1>
       <div>
-        <a href="/SPORTIFY/pages/contact.php"><button id="btn_explore" type="button">Explore</button></a>
+        <a href="/SPORTIFY/pages/page_devis.php"><button id="btn_explore" type="button">Check Prices</button></a>
       </div>
     </div>
   </div>

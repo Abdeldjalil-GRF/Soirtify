@@ -1,0 +1,17 @@
+body{
+    background-color : black;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    margin : 0;
+}
+
+.custom-container {
+    width: 90%;
+    margin: 30px auto;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255);
+}
+
