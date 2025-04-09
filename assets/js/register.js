@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        //  AJAX request to register.php
+        //AJAX request to register.php
         let formData = new FormData();
         formData.append("firstname", firstname);
         formData.append("lastname", lastname);
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }, 3000);
 
             } else {
-                messageContainer.style.color = "red"; //error message in red
+                messageContainer.style.color = "red"; 
             }
         } catch (error) {
             //console.error("Fetch error:", error); 

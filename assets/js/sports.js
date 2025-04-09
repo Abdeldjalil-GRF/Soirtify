@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Display the loading indicator
+            
             messageContainer.innerHTML = `
                 <div class="alert alert-info alert-dismissible fade show" role="alert">
                     <div class="spinner-border spinner-border-sm me-2" role="status">

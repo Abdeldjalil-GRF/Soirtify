@@ -13,5 +13,58 @@ body{
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(255, 255, 255);
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
 }
 
+.scrollspy-example {
+    max-height: 500px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    margin-right: 10px; 
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+}
+
+/*les boutons add */ 
+.btn_add{
+  margin : 10px 10px;
+  background: black;
+  color : white;
+  border: 0px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 2px 10px 2px 10px; 
+  font-size: 20px;
+}
+
+.btn_add:hover {
+  background: rgb(255,255,255);
+  transition: 0.6s;
+  color: black;
+}
+
+
+h1{
+  text-decoration: underline;
+}
+
+h6{
+  text-align: right;
+  font-size: 25px;
+}
+
+
+/* classes pour les Sports Choisis*/
+.sport-name {
+  margin-right: 10px;  
+}
+
+.level {
+  margin-right: 10px;  
+}
+
+.price {
+  font-weight: bold;
+}

@@ -54,22 +54,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // L'adresse de l'utilisateur (destinataire)
             $mail->addAddress($email); // L'email de l'utilisateur
-
             $mail->isHTML(false);
-            $mail->Subject = "Confirmation de reception de votre message";
-            $mail->Body = "Bonjour $prenom $nom,\n\nMerci d'avoir nous avoir contacté. Voici un récapitulatif de votre message :\n\n"
-                . "Nom: $nom\nPrénom: $prenom\nTéléphone: $num_tel\nEmail: $email\nMessage:\n$message\n\nNous reviendrons vers vous dès que possible.\n\nCordialement,\nL'équipe Sportify";
-
+            $mail->Subject = "Confirmation of receipt of your message";
+            $mail->Body = "Hello $prenom $nom,\n\nThank you for contacting us. Here is a summary of your message:\n\n"
+                . "Last Name: $nom\nFirst Name: $prenom\nPhone: $num_tel\nEmail: $email\nMessage:\n$message\n\nWe will get back to you as soon as possible.\n\nBest regards,\nThe Sportify Team";
+            
             if ($mail->send()) {
-                echo json_encode(["status" => "success", "message" => "Votre message a été envoyé et enregistré. Un email de confirmation a été envoyé à votre adresse."]);
+                echo json_encode(["status" => "success", "message" => "Your message has been sent and recorded. A confirmation email has been sent to your address."]);
             } else {
-                echo json_encode(["status" => "error", "message" => "Le message est enregistré mais l'email de confirmation n'a pas été envoyé."]);
+                echo json_encode(["status" => "error", "message" => "The message has been recorded but the confirmation email could not be sent."]);
             }
-        } catch (Exception $e) {
-            echo json_encode(["status" => "error", "message" => "L'email n'a pas pu être envoyé : {$mail->ErrorInfo}"]);
-        }
-    } catch (PDOException $e) {
-        echo json_encode(["status" => "error", "message" => "Erreur lors de l'enregistrement : " . $e->getMessage()]);
+            } catch (Exception $e) {
+                echo json_encode(["status" => "error", "message" => "The email could not be sent: {$mail->ErrorInfo}"]);
+            }
+            } catch (PDOException $e) {
+                echo json_encode(["status" => "error", "message" => "Error while saving: " . $e->getMessage()]);
+            }
+            
     }
-}
 ?>

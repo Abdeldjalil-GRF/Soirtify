@@ -2,7 +2,7 @@ document.querySelectorAll('.annuler-btn').forEach(btn => {
     btn.addEventListener('click', async function() {
         const reservationId = this.dataset.id;
         
-        if (confirm('Êtes-vous sûr de vouloir annuler cette réservation ?')) {
+        if (confirm('Are you sure you want to cancel this reservation ?')) {
             try {
                 const response = await fetch(`/SPORTIFY/includes/cancel_reservation.php`, {
                     method: 'POST',
@@ -17,13 +17,13 @@ document.querySelectorAll('.annuler-btn').forEach(btn => {
                 
                 if (result.status === 'success') {
                     this.closest('tr').remove();
-                    alert('Réservation annulée avec succès');
+                    alert('Reservation canceled with success');
                 } else {
                     alert('Erreur : ' + result.message);
                 }
                 
             } catch (error) {
-                alert('Erreur de communication avec le serveur');
+                alert('Server error');
             }
         }
     });

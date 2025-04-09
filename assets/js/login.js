@@ -1,5 +1,5 @@
 document.getElementById("form_input").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Prevent page reload
+    event.preventDefault(); 
 
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
@@ -28,7 +28,7 @@ document.getElementById("form_input").addEventListener("submit", async function 
         messageContainer.textContent = result;
         
         if (result.includes("success")) {
-            window.location.href = "../pages/home.php"; 
+            window.location.href = "/Sportify/pages/home.php"; 
         }
     } catch (error) {
         messageContainer.textContent = "An error occurred. Please try again.";

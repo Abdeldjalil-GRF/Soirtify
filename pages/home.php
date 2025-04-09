@@ -50,21 +50,21 @@
     </div>
    
   <?php if(!isset($_SESSION["user_id"])) : ?>
-  <div class="content">
-      <h1>Be Champion</h1>
-      <div>
-        <a href="/SPORTIFY/pages/page_devis.php"><button id="btn_explore" type="button">Check Prices</button></a>
+        <div class="content">
+            <h1>Be Champion</h1>
+            <div>
+              <a href="/SPORTIFY/pages/home.php#aboutus"><button id="btn_explore" type="button">Know-More</button></a>
+            </div>
+          </div>
+        </div>
+  <?php else :  ?>
+      <div class="content">
+          <h1>Be Champion</h1>
+          <div>
+            <a href="/SPORTIFY/pages/page_devis.php"><button id="btn_explore" type="button">Check Prices</button></a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-   <?php else :  ?>
-   <div class="content">
-      <h1>Be Champion</h1>
-      <div>
-        <a href="/SPORTIFY/pages/home.php#aboutus"><button id="btn_explore" type="button">Know-More</button></a>
-      </div>
-    </div>
-  </div>
   <?php endif ?>
   <!-- About us   -->
   <div class="about-section" id="aboutus">

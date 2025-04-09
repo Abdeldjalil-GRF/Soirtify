@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/SPORTIFY/assets/css/contact.css">
-
     <title>Contact</title>
 </head>
 <body>
@@ -21,8 +20,8 @@
         </a>
     </div>
 
-        <h2 class="text-center mt-4">Contactez-nous</h2>
-        <p class="text-center">Une question ? Remplissez ce formulaire et nous vous répondrons rapidement.</p>
+        <h2 class="text-center mt-4">Contact-us</h2>
+        <p class="text-center">a question ? contact us ! Sportify's TEAm is happy to answer you </p>
         
         <form id="contact-form" action="/SPORTIFY/includes/contact_form.php" method="POST">
 
@@ -32,7 +31,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="prenom" class="form-label">Prénom :</label>
+                <label for="prenom" class="form-label">firstName :</label>
                 <input type="text" class="form-control" id="prenom" name="prenom" >
             </div>
 
@@ -42,7 +41,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="num_tel" class="form-label">Téléphone :</label>
+                <label for="num_tel" class="form-label">Phone Number :</label>
                 <input type="tel" class="form-control" id="num_tel" name="num_tel" >
             </div>
 
@@ -51,7 +50,7 @@
                 <textarea class="form-control" id="message" name="message" rows="4" ></textarea>
             </div>
 
-            <button type="submit" class="btn w-100" id="btn_contact">Envoyer</button>
+            <button type="submit" class="btn w-100" id="btn_contact">Send</button>
         </form>
 
         <p id="response-message" class="mt-3 text-center"></p>
@@ -62,4 +61,3 @@
 
 </body>
 </html>
-

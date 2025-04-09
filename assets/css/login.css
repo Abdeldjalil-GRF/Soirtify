@@ -3,7 +3,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ensure full height */
+    height: 100vh;
     margin: 0;
 }
 
@@ -11,23 +11,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Center vertically */
+    height: 100vh; 
     gap : 10px;
 }
 
 
 
 .logo {
-    text-align: center; /* Centers content */
-    position: relative; /* Allows fine positioning */
+    text-align: center; 
+    position: relative; 
     left : -100px;
 }
 
 .logo img {
     display: flexbox;
-    margin: 0 auto; /* Centers horizontally */
-    max-width: 50%; /* Keep the logo size fixed */
-    max-height: 50%; /* Keep the logo height fixed */
+    margin: 0 auto; 
+    max-width: 50%; 
+    max-height: 50%;
 }
 
 #sentences {
@@ -35,30 +35,30 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 40px; /* Increase font size of the sentence */
+    font-size: 40px; 
     color: white;
     margin: 0 auto;
-    width: 60%; /* Control the width for wrapping */
-    text-align: center; /* Centers the text */
-    line-height: 1.2; /* Adjust line spacing to allow more lines */
-    word-wrap: break-word; /* Ensure words break properly across lines */
+    width: 60%; 
+    text-align: center; 
+    line-height: 1.2; 
+    word-wrap: break-word; 
 }
 
 
 .form_log_in {
-    background-color: white; /* White background */
+    background-color: white; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    max-width: 400px; /* Prevent stretching */
-    width: 100%; /* Ensures responsiveness */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    max-width: 400px; 
+    width: 100%;
     margin: 0 auto;
-    text-align: center; /* Centers form content */
+    text-align: center; 
     font-family: "Bebas Neue", sans-serif;
     font-size: 20px;
     display: flex;
-    flex-direction: column; /* Align elements in a column */
-    justify-content: space-between; /* Distribute space evenly */
+    flex-direction: column; 
+    justify-content: space-between; 
     margin-left : -70px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 
     0 0 40px rgba(255, 255, 255, 0.3), 
@@ -68,18 +68,18 @@ body {
 .form_log_in img {
     display: block;
     margin: 0 ;
-    max-width: 100%; /* Adjust logo size */
+    max-width: 100%; 
 }
 
 
 .type  {
-    text-align: left; /* Align input fields and labels to the left */
-    margin-bottom: 15px; /* Spacing between input fields */
+    text-align: left; 
+    margin-bottom: 15px; 
 }
 
 
 .type p {
-    margin-bottom: 5px; /* Space between label and input */
+    margin-bottom: 5px; 
     font-size: 25px;
     font-weight: 400;
     color: #000;
@@ -88,7 +88,7 @@ body {
 input {
     width: 95%;
     padding: 10px;
-    border: 1px solid #000; /* Light border */
+    border: 1px solid #000; 
     border-radius: 10px;
     font-size: 16px;
 }
@@ -97,9 +97,9 @@ input {
 .btn.bkg {
     width: 30%;
     padding: 5px;
-    background-color: #000; /* Black background */
-    color: white; /* White text */
-    border: 2px solid #000; /* Black border */
+    background-color: #000; 
+    color: white; 
+    border: 2px solid #000; 
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
@@ -108,14 +108,14 @@ input {
 }
 
 .btn.bkg:hover {
-    background-color: white; /* White background on hover */
-    color: #000; /* Black text */
+    background-color: white; 
+    color: #000; 
 }
 
 #message {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
-    color: #ff0000; /* Red for error or success messages */
+    color: #ff0000; 
     margin-top: 30px;
     text-align: center;
 }
