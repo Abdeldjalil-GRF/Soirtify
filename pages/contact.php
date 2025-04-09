@@ -16,7 +16,9 @@
     <div class="container">
 
     <div class="logo">
+        <a href="/SPORTIFY/pages/home.php">
         <img src="/SPORTIFY/assets/images/contact/logo.png" alt="logo">
+        </a>
     </div>
 
         <h2 class="text-center mt-4">Contactez-nous</h2>

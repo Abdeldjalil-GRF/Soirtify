@@ -1,8 +1,123 @@
 /* Style général */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
 body {
   background-color: #0a0a0a;
   color: #e0e0e0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+.navbar {
+  width: 90%;
+  padding: 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  font-size: 25px;
+}
+
+.logo {
+  width: 160px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+}
+
+li a:hover {
+  background: white;
+  transition: 0.6s;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .banner video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.menu-toggle:hover {
+  background-color: rgb(255, 255, 255);
+  color: #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
 /* Carte */
 .course-card {
@@ -65,7 +180,7 @@ body {
   background-color: #404040;
 }
 
-/* Pied de carte */
+/*Pied de carte*/
 .card-footer {
   background-color: #f8f9fa;
   border-top: 2px solid #dee2e6;
@@ -82,9 +197,14 @@ body {
   width: 20px;
 }
 
-footer {
-  margin-top: 3rem;
+.row-footer{
+  margin: 0;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 footer h5 {
   font-weight: 600;
   margin-bottom: 1rem;
@@ -96,4 +216,13 @@ footer .social-icons a {
 }
 footer .social-icons a:hover {
   color: #ccc !important;
+}
+
+#footer{
+  margin-top : 0px;
+  text-align: center;
+}
+
+#lien{
+  color : white;
 }
