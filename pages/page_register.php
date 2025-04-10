@@ -20,7 +20,7 @@
                     
                     <form id="register_form" method="post">
                         <div class="card-top">
-                            <img src="/SPORTIFY/assets/images/register/Logo_connexion_black.png" id="card-logo" alt="logo">
+                            <img src="/SPORTIFY/assets/images/connexion/Logo_connexion_black.png" id="card-logo" alt="logo">
                             <p class="text">just few steps to become <strong>champion</strong></p>
                         </div>
                         <div class="card-body">
