@@ -3,7 +3,7 @@ session_start();
 require "../config/database_connexion.php";
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /SPORTIFY/pages/login.html');
+    header('Location: /SPORTIFY/pages/page_login.html');
     exit;
 }
 

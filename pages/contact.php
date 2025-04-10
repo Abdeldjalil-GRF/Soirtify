@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,37 +21,37 @@
         </a>
     </div>
 
-        <h2 class="text-center mt-4">Contactez-nous</h2>
-        <p class="text-center">Une question ? Remplissez ce formulaire et nous vous répondrons rapidement.</p>
+        <h2 class="text-center mt-4">Contact Us</h2>
+        <p class="text-center">Have a question? Fill out this form and we'll get back to you quickly.</p>
         
         <form id="contact-form" action="/SPORTIFY/includes/contact_form.php" method="POST">
 
             <div class="mb-3">
-                <label for="nom" class="form-label">Nom :</label>
+                <label for="nom" class="form-label">Last Name:</label>
                 <input type="text" class="form-control" id="nom" name="nom" >
             </div>
 
             <div class="mb-3">
-                <label for="prenom" class="form-label">Prénom :</label>
+                <label for="prenom" class="form-label">First Name:</label>
                 <input type="text" class="form-control" id="prenom" name="prenom" >
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">Email :</label>
+                <label for="email" class="form-label">Email:</label>
                 <input type="text" class="form-control" id="email" name="email" >
             </div>
 
             <div class="mb-3">
-                <label for="num_tel" class="form-label">Téléphone :</label>
+                <label for="num_tel" class="form-label">Phone:</label>
                 <input type="tel" class="form-control" id="num_tel" name="num_tel" >
             </div>
 
             <div class="mb-3">
-                <label for="message" class="form-label">Message :</label>
+                <label for="message" class="form-label">Message:</label>
                 <textarea class="form-control" id="message" name="message" rows="4" ></textarea>
             </div>
 
-            <button type="submit" class="btn w-100" id="btn_contact">Envoyer</button>
+            <button type="submit" class="btn w-100" id="btn_contact">Send</button>
         </form>
 
         <p id="response-message" class="mt-3 text-center"></p>
@@ -62,4 +62,3 @@
 
 </body>
 </html>
-
