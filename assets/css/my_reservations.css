@@ -63,7 +63,20 @@
   .navbar a:hover {
     color: black;
   }
-   
+  
+  #btn_logout{
+    background: black;
+    color : white;
+    border: 0px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  #btn_logout:hover {
+    background: rgb(255,255,255);
+    transition: 0.6s;
+    color: black;
+  }
   
   @media (min-aspect-ratio: 16/9) {
     .banner video {

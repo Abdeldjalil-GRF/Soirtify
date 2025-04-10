@@ -10,13 +10,13 @@ require 'C:/xampp/htdocs/SPORTIFY/PHPMailer/src/Exception.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Vérifie que la connexion à la base de données est bien établie
+// Check if the database connection is established
 if (!isset($connexion)) {
-    echo json_encode(["status" => "error", "message" => "Connexion à la base de données échouée."]);
+    echo json_encode(["status" => "error", "message" => "Failed to connect to the database."]);
     exit;
 }
 
-// Vérifie que la requête est bien en POST
+// Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = htmlspecialchars(trim($_POST["nom"] ?? ""));
     $prenom = htmlspecialchars(trim($_POST["prenom"] ?? ""));
@@ -24,9 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars(trim($_POST["email"] ?? ""));
     $message = htmlspecialchars(trim($_POST["message"] ?? ""));
 
-
     try {
-        // Insère les données dans la base
+        // Insert data into the database
         $sql = "INSERT INTO commentaires (nom, prenom, num_tel, mail, commentaire) 
                 VALUES (:nom, :prenom, :num_tel, :mail, :commentaire)";
         $stmt = $connexion->prepare($sql);
@@ -38,38 +37,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ":commentaire" => $message
         ]);
 
-        // Envoi de l'email de récapitulatif à l'utilisateur avec PHPMailer
+        // Send confirmation email to the user using PHPMailer
         $mail = new PHPMailer(true);
         try {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'sportify.contact.87@gmail.com'; // Votre adresse Gmail
-            $mail->Password = 'chjf walg rzgh lrwl'; // Mot de passe d'application
+            $mail->Username = 'sportify.contact.87@gmail.com'; // Your Gmail address
+            $mail->Password = 'chjf walg rzgh lrwl'; // App password
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
-            // L'email de l'expéditeur
+            // Sender's email
             $mail->setFrom('sportify.contact.87@gmail.com', 'Sportify Contact');
 
-            // L'adresse de l'utilisateur (destinataire)
-            $mail->addAddress($email); // L'email de l'utilisateur
+            // Recipient's email
+            $mail->addAddress($email); // User's email
+
             $mail->isHTML(false);
             $mail->Subject = "Confirmation of receipt of your message";
             $mail->Body = "Hello $prenom $nom,\n\nThank you for contacting us. Here is a summary of your message:\n\n"
                 . "Last Name: $nom\nFirst Name: $prenom\nPhone: $num_tel\nEmail: $email\nMessage:\n$message\n\nWe will get back to you as soon as possible.\n\nBest regards,\nThe Sportify Team";
-            
+
             if ($mail->send()) {
-                echo json_encode(["status" => "success", "message" => "Your message has been sent and recorded. A confirmation email has been sent to your address."]);
+                echo json_encode(["status" => "success", "message" => "Your message has been sent and saved. A confirmation email has been sent to your address."]);
             } else {
-                echo json_encode(["status" => "error", "message" => "The message has been recorded but the confirmation email could not be sent."]);
+                echo json_encode(["status" => "error", "message" => "Message saved, but confirmation email could not be sent."]);
             }
-            } catch (Exception $e) {
-                echo json_encode(["status" => "error", "message" => "The email could not be sent: {$mail->ErrorInfo}"]);
-            }
-            } catch (PDOException $e) {
-                echo json_encode(["status" => "error", "message" => "Error while saving: " . $e->getMessage()]);
-            }
-            
+        } catch (Exception $e) {
+            echo json_encode(["status" => "error", "message" => "Email could not be sent: {$mail->ErrorInfo}"]);
+        }
+    } catch (PDOException $e) {
+        echo json_encode(["status" => "error", "message" => "Error while saving your message: " . $e->getMessage()]);
     }
+}
 ?>

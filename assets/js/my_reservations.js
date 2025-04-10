@@ -28,3 +28,14 @@ document.querySelectorAll('.annuler-btn').forEach(btn => {
         }
     });
 });
+
+function confirmLogout(event) {
+    event.preventDefault();
+    if (confirm("Are you sure you want to logout?")) {
+       
+      fetch('/SPORTIFY/includes/logout.php')
+        .then(() => {
+          window.location.href = '/SPORTIFY/pages/home.php';
+        });
+    }
+  }
