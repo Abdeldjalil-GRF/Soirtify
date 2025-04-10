@@ -206,6 +206,75 @@ li a:hover {
   background-color: #404040;
 }
 
+/* Achievements Section Styling */
+#title-achiev {
+  text-decoration: underline;
+  color: white;
+  background-color: #0a0a0a;
+  text-align: center;
+  padding: 10px;
+}
+
+#achiev {
+  margin-top: 2px;
+  background-color: #0a0a0a;
+}
+
+
+.separator-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin: 1.5rem 0;
+}
+
+
+.container-achiev {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+.card-achiev {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  max-width: 320px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-achiev:hover {
+  transform: translateY(-5px);
+}
+
+.achiev-text {
+  font-size: 1.1rem; 
+  color: #343a40;
+  font-style: italic; 
+  margin-bottom: 1rem;
+}
+
+.achiev-name {
+  font-size: 1.3rem; 
+  font-weight: bold;
+  color: #212529;
+  margin-top: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .row-feedback {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /*Pied de carte*/
 .card-footer {
   background-color: #f8f9fa;

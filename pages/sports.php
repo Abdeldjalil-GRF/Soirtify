@@ -38,8 +38,7 @@
       <?php else : ?>
         <ul class="nav-links" id="nav-links">
           <li><a href="/Sportify/pages/sports.php">Our Sports</a></li>
-          <li><a href="#aboutus">About Us</a></li>
-          <li><a href="#feedback">FeedBacks</a></li>
+          <li><a href="#achiev">Achievements</a></li>
           <li><a href="/SPORTIFY/pages/page_login.php">Connexion</a></li>
         </ul>
       <?php endif; ?>
@@ -398,8 +397,41 @@
         </div>
         <?php } ?>
   </main>
-  
-  
+
+    <!-- Our achievements -->
+    <section class="testimonials-section" id="achiev">
+      <div class="separator-line"></div> 
+      <h1 id="title-achiev">Our Achievements</h1>
+      <div class="container-achiev container">
+        <div class="row row-feedback text-center">
+          
+          <div class="col-md-4 mb-4">
+            <div class="card-achiev p-4">
+              <div class="feedback-stars mb-2">🏅🏅🏅🏅</div>
+              <p class="achiev-text">"Gold Medal in the National BJJ Championship, 2024"</p>
+              <h5 class="achiev-name mt-3">LAGGOUN Khaled</h5>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card-achiev p-4">
+              <div class="feedback-stars mb-2">🏅🏅🏅🏅</div> 
+              <p class="achiev-text">"Finished the 2nd in the National Karate Championship , 2023."</p>
+              <h5 class="achiev-name mt-3">Guerrouf AbdElDjalil</h5>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-4">
+            <div class="card-achiev p-4">
+              <div class="feedback-stars mb-2">🏆🏆🏆🏆</div> 
+              <p class="achiev-text">"Achieved 1st Dan Black Belt in Judo after 5 years of training."</p>
+              <h5 class="achiev-name mt-3">Michael Johnson</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   <script src="/SPORTIFY/assets/js/sports.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
