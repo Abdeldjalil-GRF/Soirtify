@@ -24,10 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //retrieve the sport ID
         $sql_get_sport = "SELECT id_sport FROM sports WHERE nom = :nom";
         $stmt1 = executeQuery($sql_get_sport,[':nom' => $sport_nom]);
-        /*
-        $stmt = $connexion->prepare("SELECT id_sport FROM sports WHERE nom = :nom");
-        $stmt->execute([':nom' => $sport_nom]);
-        */
+        
         $sport = $stmt1->fetch(PDO::FETCH_ASSOC);
         
         if (!$sport) throw new Exception("Sport not found");
@@ -36,15 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql_get_course = "SELECT id_cour FROM cours WHERE id_sport = :id_sport AND categorie = :categorie";
         $stmt2 = executeQuery($sql_get_course,[':id_sport' => $sport['id_sport'],':categorie' => $categorie]);
        
-        /*
-        $stmt = $connexion->prepare("SELECT id_cour FROM cours 
-                                   WHERE id_sport = :id_sport 
-                                   AND categorie = :categorie");
-        $stmt->execute([
-            ':id_sport' => $sport['id_sport'],
-            ':categorie' => $categorie
-        ]);*/
-
+        
         $cours = $stmt2->fetch(PDO::FETCH_ASSOC);
         
         if (!$cours) throw new Exception("Course not available for this level");
@@ -55,16 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':id_client' => $_SESSION['user_id'],
             ':id_cour' => $cours['id_cour']
         ]);
-        /*
-        $stmt = $connexion->prepare("SELECT * FROM cours_clients 
-                                   WHERE id_client = :id_client 
-                                   AND id_cour = :id_cour");
-        $stmt->execute([
-            ':id_client' => $_SESSION['user_id'],
-            ':id_cour' => $cours['id_cour']
-        ]);
-        */
-
+        
         if ($stmt3->fetch()) {
             throw new Exception("Registration already exists");
         }
@@ -72,22 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //insert the reservation
         $sql_to_insert = "INSERT INTO cours_clients (id_client, id_cour) VALUES (:id_client, :id_cour)";
         $stmt4 = executeQuery($sql_to_insert,[':id_client' => $_SESSION['user_id'],':id_cour' => $cours['id_cour']]);
-        /*
-        $stmt = $connexion->prepare("INSERT INTO cours_clients (id_client, id_cour) 
-                                   VALUES (:id_client, :id_cour)");
-        $stmt->execute([
-            ':id_client' => $_SESSION['user_id'],
-            ':id_cour' => $cours['id_cour']
-        ]);
-        */
+        
 
         //retrieve user info
         $sql_retrieve_user  = "SELECT nom, prenom, mail FROM clients WHERE id_client = :user_id";
         $stmt5= executeQuery($sql_retrieve_user,[':user_id' => $_SESSION['user_id']]);
-        /*
-        $stmt = $connexion->prepare("SELECT nom, prenom, mail FROM clients WHERE id_client = :user_id");
-        $stmt->execute([':user_id' => $_SESSION['user_id']]);
-        */
+        
         $user = $stmt5->fetch(PDO::FETCH_ASSOC);
 
         if (!$user) {

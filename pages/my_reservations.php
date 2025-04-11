@@ -26,27 +26,6 @@ try {
  
     $stmt = executeQuery($sql_rqt,[':user_id' => $_SESSION['user_id']]);
     $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    /*
-    $stmt = $connexion->prepare("
-        SELECT 
-            cc.id_cours_clients AS id_reservation,
-            s.nom AS sport, 
-            c.categorie, 
-            c.jour,
-            c.heure,
-            co.nom AS coach_nom,
-            co.prenom AS coach_prenom
-        FROM cours_clients cc
-        JOIN cours c ON cc.id_cour = c.id_cour
-        JOIN sports s ON c.id_sport = s.id_sport
-        JOIN coachs co ON c.id_coach = co.id_coach
-        WHERE cc.id_client = :user_id
-    ");
-    
-    $stmt->execute([':user_id' => $_SESSION['user_id']]);
-    $reservations = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    */
     
 } catch (PDOException $e) {
     $error = "Database error: " . $e->getMessage();

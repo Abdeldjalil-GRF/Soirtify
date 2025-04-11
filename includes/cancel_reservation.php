@@ -20,19 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($data['_method']) && $data['_
         // Supprimer la réservation
         $sql_requete_to_delete = "DELETE FROM cours_clients WHERE id_cours_clients = :id AND id_client = :user_id";
         $stmt = executeQuery($sql_requete_to_delete,[':id' => $reservationId,':user_id' => $_SESSION['user_id']]); 
-       
-        /*
-        $stmt = $connexion->prepare("
-            DELETE FROM cours_clients 
-            WHERE id_cours_clients = :id 
-            AND id_client = :user_id
-        ");
-        
-        $stmt->execute([
-            ':id' => $reservationId,
-            ':user_id' => $_SESSION['user_id']
-        ]);
-        */
         
         if ($stmt->rowCount() > 0) {
             echo json_encode(['status' => 'success', 'message' => 'Rzservation canceled']);
