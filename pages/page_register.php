@@ -35,9 +35,12 @@
                                         <input type="date" placeholder="date" name="birthday" id="birthday">
                                     </div>
                                     <div class="type">
-                                        <p>Password :*</p>
-                                        <input type="password" placeholder="password" name="password" id="password">
+                                        <p>Confirm Password : *</p>
+                                        <input type="password" placeholder="Confirm password" name="cpassword" id="cpassword">
                                     </div>
+                                    <div>
+                                             <span></span>
+                                        </div>
                                 </div>
                                 <div class="triple">
                                     <div class="type">
@@ -46,13 +49,19 @@
                                     </div>
                                     <div class="type">
                                         <p>Email Address: *</p>
-                                        <input type="email" placeholder="example@gmail.com" name="email" id="email">
+                                        <input type="email" placeholder="example@gmail.com" name="email" id="email"> 
                                     </div>
+
                                     <div class="type">
-                                        <p>Confirm Password : *</p>
-                                        <input type="password" placeholder="Confirm password" name="cpassword" id="cpassword">
-                                    </div>
+                                        <p>Password :*</p>
+                                        <input type="password" placeholder="password" name="password" id="password">
+                                        <div id="passwordStrengthContainer">
+                                             <progress id="passwordStrength" value="0" max="100"></progress>
+                                             <span id="passwordStrengthText"></span>
+                                        </div>
+                                    </div>                                    
                                 </div>
+                                
                             </div>
 
                             
