@@ -17,10 +17,9 @@
             <div class="col-10" id="card">
                 <div class="card custom-card" id="global_card">
                     
-                    
-                    <form id="register_form" method="post">
+                <form id="register_form" method="post">
                         <div class="card-top">
-                            <img src="/SPORTIFY/assets/images/connexion/Logo_connexion_black.png" id="card-logo" alt="logo">
+                            <a href="/Sportify/pages/home.php" id="logo-link" ><img src="/assets/images/connexion/Logo_connexion_black.png" id="card-logo" alt="logo"></a>
                             <p class="text">just few steps to become <strong>champion</strong></p>
                         </div>
                         <div class="card-body">
@@ -31,27 +30,22 @@
                                         <input type="text" placeholder="lastname" name="lastname" id="lastname">
                                     </div>
                                     <div class="type">
+                                        <p>First Name : *</p>
+                                        <input type="text" placeholder="firstname" name="firstname" id="firstname">
+                                         <div>
+                                            <span><br/></span>
+                                         </div>
+                                    </div>
+                                    <div class="type">
                                         <p>Birthday : *</p>
                                         <input type="date" placeholder="date" name="birthday" id="birthday">
                                     </div>
-                                    <div class="type">
-                                        <p>Confirm Password : *</p>
-                                        <input type="password" placeholder="Confirm password" name="cpassword" id="cpassword">
-                                    </div>
-                                    <div>
-                                             <span></span>
-                                        </div>
                                 </div>
                                 <div class="triple">
-                                    <div class="type">
-                                        <p>First Name : *</p>
-                                        <input type="text" placeholder="firstname" name="firstname" id="firstname">
-                                    </div>
-                                    <div class="type">
+                                     <div class="type">
                                         <p>Email Address: *</p>
-                                        <input type="email" placeholder="example@gmail.com" name="email" id="email"> 
-                                    </div>
-
+                                        <input type="email" placeholder="example@gmail.com" name="email" id="email">
+                                    </div> 
                                     <div class="type">
                                         <p>Password :*</p>
                                         <input type="password" placeholder="password" name="password" id="password">
@@ -59,9 +53,12 @@
                                              <progress id="passwordStrength" value="0" max="100"></progress>
                                              <span id="passwordStrengthText"></span>
                                         </div>
-                                    </div>                                    
+                                    </div>
+                                    <div class="type">
+                                        <p>Confirm Password : *</p>
+                                        <input type="password" placeholder="Confirm password" name="cpassword" id="cpassword">
+                                    </div>
                                 </div>
-                                
                             </div>
 
                             
@@ -69,7 +66,6 @@
                                 <span id="message"></span>
                             </div>
                         </div>
-
                     
                         <div class="card-footer">
                             <label for="conditions" id="condition_phrase">

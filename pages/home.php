@@ -34,7 +34,6 @@
 
       <?php if (isset($_SESSION['user_id'])) : ?>
         <ul class="nav-links" id="nav-links">
-          <li><a href="/Sportify/pages/home.php">Home</a></li>
           <li><a href="/Sportify/pages/sports.php">Sports</a></li>
           <li><a href="/Sportify/pages/my_reservations.php">My Trainings</a></li>
           <li><a onclick="confirmLogout(event)"><button  id="btn_logout">Logout</button></a></li>

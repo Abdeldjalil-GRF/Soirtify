@@ -11,7 +11,22 @@ body {
 
 .card-top{
     display: flex;
-    margin: 0px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#logo-link {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    max-width: 100%;
+}
+
+#logo-link img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
@@ -31,7 +46,7 @@ body {
 
 .type-container {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between; 
     gap: 15px;
 }
@@ -72,11 +87,6 @@ body {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 
     0 0 40px rgba(255, 255, 255, 0.3), 
     0 0 60px rgba(255, 255, 255, 0.2);
-}
-
-#card-logo {
-    padding: 20px;
-    max-width: 50%
 }
 
 
@@ -150,3 +160,53 @@ a:hover {
         font-size: 14px;
         font-weight: 500;
 }
+
+@media screen and (max-width: 768px) {
+ 
+   
+    #card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #card-logo {
+        max-width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .card-body {
+        margin: 10px 15px;
+        gap: 10px;
+    }
+
+    .type-container {
+        flex-direction: column;
+    }
+
+    .btn.bkg {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    #condition_phrase,
+    #para {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    #message {
+        font-size: 13px;
+    }
+}
+
