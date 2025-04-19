@@ -17,7 +17,7 @@ The goal was to create a complete sports booking platform with core functionalit
 - **User Authentication**: Registration, login, email uniqueness check, password protection
 - **Homepage**: Presentation of the platform, services, and client testimonials
 - **Activity Catalog**:
-  - Sessions: Yoga, Pilates, Strength Training, Cycling, Fitness, and 1-on-1 Coaching
+  - Sessions:Jujutsu, Judo, Boxing, Muay Thai, Strength Training, Karate.
   - Session details include duration, level, and coach
   - Booking system updates the database and shows a confirmation page
 - **Quote Request Page**: Users fill out a form to receive a simulated pricing quote via email
